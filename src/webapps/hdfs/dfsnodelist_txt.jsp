@@ -23,7 +23,7 @@ public void generateDFSNodesList(JspWriter out,  NameNode nn,
   ArrayList<DatanodeDescriptor> live = new ArrayList<DatanodeDescriptor>();    
   ArrayList<DatanodeDescriptor> dead = new ArrayList<DatanodeDescriptor>();
   ArrayList<DatanodeDescriptor> excluded = new ArrayList<DatanodeDescriptor>();
-  jspHelper.DFSNodesStatus(live, dead, excluded);
+  jspHelper.DFSNodesStatus(live, dead);
   String whatNodes = request.getParameter("whatNodes");
   ArrayList<DatanodeDescriptor> toBePrinted;
   if ("DEAD".equalsIgnoreCase(whatNodes)) {
